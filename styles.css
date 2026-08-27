@@ -1,0 +1,245 @@
+@font-face {
+  font-family: 'MontserratVariable';
+  src: url('assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'InterTightItalic';
+  src: url('assets/fonts/InterTight-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 750;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Urbane';
+  src: url('assets/fonts/UrbaneRounded-ExtraLight.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+.fuente_montserrat {
+    font-family: 'MontserratVariable', sans-serif !important;
+}
+
+.fuente_inter {
+    font-family: 'InterTightItalic', sans-serif !important;
+}
+
+.fuente_Urbane {
+    font-family: 'Urbane', sans-serif !important;
+    text-align: left;
+}
+
+.fuente_gabarito {
+    font-family: 'Gabarito', sans-serif !important;
+    font-weight: 600;
+    letter-spacing: 5%;
+    font-size: 150px;
+    text-align: center;
+    background: linear-gradient(#eaedee, #3f4b57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fuente_manrope {
+    font-family: 'Manrope', sans-serif !important;
+    font-weight: 700;
+}
+
+
+body {
+    background: #08090d;
+    background-image: radial-gradient(circle at 70% 40%, #076ff6, transparent 40%);
+}
+
+nav {
+    border-radius: 32px;
+    width: 80%;
+    border: 1px solid #393b3f;
+    background-color: #1c1d21;
+    margin: 0 auto;
+}
+
+.custom-navbar {
+    background-color: rgba(28, 29, 33, 0.75) !important; 
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(47, 52, 62, 0.7);
+    border-radius: 100px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px 24px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    flex-wrap: nowrap;
+}
+
+.custom-navbar > .container_fluid {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.custom-navbar .navbar-brand {
+    font-family: 'Urbane', sans-serif !important; 
+    font-weight: 800;         
+    color: #ffffff !important;
+    margin-left: 20px;      
+    letter-spacing: 1.5px
+}
+
+.navbar-links {
+    display: flex;
+    gap: 70px; 
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.navbar-links .nav-link {
+    color: #a0a5b1 !important; 
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar-links .nav-link:hover {
+    color: #ffffff !important;
+}
+
+.btn-azul-nav {
+    background: linear-gradient(90deg, #076ff6, #00469d);
+    color: white !important;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 100px; 
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Manrope';
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-azul {
+    background: linear-gradient(90deg, #076ff6, #00469d);
+    color: white !important;
+    padding: 10px 24px;
+    border-radius: 100px; 
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Manrope';
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-gris {
+    background: #2d2f30;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Manrope';
+    border-radius: 100px;  
+    color: white;
+}
+
+.btn-gray:hover {
+    background: #3c3f41;
+    transform: scale(1.02);
+}
+
+.btn-blue:hover {
+    background: linear-gradient(90deg, #075fd3, #023574);
+    transform: scale(1.02);
+}
+
+.hover-zoom {
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275), translate 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-zoom:hover {
+  translate: 0 -6px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  background-color: #062f64;
+  overflow: hidden;
+}
+
+.circle img {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+
+h1 {
+    text-align: left;
+    color: #dfe1e1;
+}
+
+h2 {
+    text-align: center;
+    color: #e3e5e6;
+}
+
+.contenedor_sobremi {
+    width: 90%;
+    margin: auto;
+    height: 80vh;
+    background: violet;  
+}
+
+.yo {
+    background: white;
+    width: 37.5%;
+    height: 100%;
+}
+
+.descripcion {
+    background: yellow;
+    height: 35%;
+    margin-left: auto;
+}
+
+.stacktech {
+    width: 60%;
+    height: 30%;
+    background: red;
+}
+
+.experiencia {
+    width: 60%;
+    height: 40%;
+    background: green;
+}
+
+.pequeño {
+    font-size: 32px;
+}
+
+p {
+    color: #ffffff;
+    text-align: left;
+}
+
+footer {
+    background-color: #071220;
+}
+
+section {
+    min-height: 100vh;
+}
+
+button {
+    border: 0px;
+}
