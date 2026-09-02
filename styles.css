@@ -176,7 +176,7 @@ header nav {
 }
 
 #inicio {
-  min-height: 85vh;
+  min-height: 75vh;
   display: flex;
   align-items: center;
 }
@@ -370,7 +370,19 @@ h2 {
 }
 
 .descripcion h1 {
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.descripcion {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.descripcion p {
+    margin: 8px 0;
+    font-size: 14px;
+    line-height: 1.35;
 }
 
 .stacktech h1 {
