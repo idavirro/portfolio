@@ -55,6 +55,7 @@
 body {
     background: #08090d;
     background-image: radial-gradient(circle at 70% 40%, #076ff6, transparent 40%);
+    background-attachment: fixed;
 }
 
 nav {
@@ -196,31 +197,35 @@ h2 {
     width: 90%;
     margin: auto;
     height: 80vh;
-    background: violet;  
 }
 
-.yo {
-    background: white;
-    width: 37.5%;
-    height: 100%;
+.contenedor {
+    background-color: rgba(8, 15, 24, 0.6);
+    border: 1px solid rgba(10, 50, 96, 0.4);
+    border-radius: 15px;
 }
 
 .descripcion {
-    background: yellow;
-    height: 35%;
-    margin-left: auto;
+    width: 97.5%;
+    flex: 1;
 }
 
 .stacktech {
-    width: 60%;
-    height: 30%;
-    background: red;
+    width: 97.5%;
+    flex: 1;
 }
 
 .experiencia {
-    width: 60%;
-    height: 40%;
-    background: green;
+    width: 97.5%;
+    flex: 2;
+}
+
+.habilidad {
+    border-radius: 100%;
+    width: 20%;
+    height: 100%;
+    background-color: rgba(8, 15, 24, 0.6);
+    border: 1px solid rgba(10, 50, 96, 0.4);
 }
 
 .pequeño {
