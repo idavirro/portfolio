@@ -129,7 +129,7 @@ header nav {
 
 .navbar-links {
     display: flex;
-    gap: 70px; 
+    gap: 25px; 
     align-items: center;
     flex-shrink: 0;
 }
@@ -583,7 +583,8 @@ h2 {
 
 .habilidades {
     display: flex;
-    gap: 40px;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 .achicado {
@@ -761,7 +762,7 @@ p {
     margin: 0;
     padding-bottom: 28px;
     font-family: 'Gabarito', sans-serif;
-    font-size: 130px;
+    font-size: clamp(52px, 9vw, 130px);
     font-weight: 600;
     text-align: center;
     background: linear-gradient(#eaedee, #3f4b57);
@@ -1064,3 +1065,4 @@ section {
 button {
     border: 0px;
 }
+
