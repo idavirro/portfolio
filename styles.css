@@ -58,6 +58,23 @@ body {
     background-attachment: fixed;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #28588e;
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a8fd5;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -313,8 +330,9 @@ header nav {
   font-size: 32px;
 }
 
-.hero-texto h1:nth-child(2) {
+.hero-texto h2 {
   font-size: 46px;
+  text-align: left;
 }
 
 .hero-texto p {
@@ -491,7 +509,7 @@ h2 {
     margin: 8px 0;
 }
 
-.descripcion h1 {
+.descripcion h2 {
     font-size: 22px;
     margin-bottom: 8px;
 }
@@ -507,11 +525,11 @@ h2 {
     line-height: 1.35;
 }
 
-.stacktech h1 {
+.stacktech h2 {
     font-size: 24px;
 }
 
-.trayectoria h1 {
+.trayectoria h2 {
     font-size: 22px;
 }
 
@@ -525,6 +543,13 @@ h2 {
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.redes a:hover {
+    background-color: rgba(20, 95, 175, 0.65);
+    border: 1px solid rgba(220, 230, 240, 0.4);
+    transform: translateY(-5px);
 }
 
 .descripcion {
@@ -568,7 +593,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 30px;
     color: white;
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
@@ -597,6 +622,24 @@ h2 {
 
 .habilidad:hover::after {
     display: block;
+}
+
+.habilidad-lua {
+    overflow: visible;
+}
+
+.habilidad-lua img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.stacktech {
+    overflow: visible;
+}
+
+.modo-claro .habilidad-lua img {
+    filter: brightness(0) invert(1);
 }
 
 .fila-trayectoria {
@@ -682,6 +725,21 @@ p {
     margin: 10px 0 0;
     color: #dfe1e1;
     font-size: 13px;
+}
+
+.pregunta-faq[open] p {
+    animation: abrir-faq 0.25s ease;
+}
+
+@keyframes abrir-faq {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .site-footer {
@@ -838,6 +896,12 @@ p {
     gap: 14px;
 }
 
+.formulario-contacto label {
+    color: #dfe1e1;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+}
+
 .formulario-contacto input, .formulario-contacto textarea {
     padding: 12px;
     color: white;
@@ -848,6 +912,16 @@ p {
 
 .formulario-contacto textarea {
     height: 110px;
+}
+
+.descargar-cv {
+    display: block;
+    margin-top: 18px;
+    color: #dfe1e1;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
 }
 
 .modo-claro {
@@ -936,6 +1010,10 @@ p {
     color: #1c2530 !important;
 }
 
+.modo-claro .navbar-links .nav-link:hover {
+    color: #076ff6 !important;
+}
+
 .modo-claro .formulario-contacto {
     background-color: #ffffff;
     border-color: rgba(50, 75, 100, 0.3);
@@ -945,10 +1023,26 @@ p {
     color: #1c2530;
 }
 
+.modo-claro .formulario-contacto label {
+    color: #1c2530;
+}
+
 .modo-claro .formulario-contacto input, .modo-claro .formulario-contacto textarea {
     color: #1c2530;
     background-color: #eef3f7;
     border-color: rgba(50, 75, 100, 0.3);
+}
+
+.modo-claro .descargar-cv {
+    color: #1c2530;
+}
+
+.modo-claro::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modo-claro::-webkit-scrollbar-thumb {
+    background: #6d8eae;
 }
 
 .modo-claro .cerrar-modal {

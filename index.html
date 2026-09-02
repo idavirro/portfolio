@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gabarito|Manrope">
+    <link rel="icon" type="image/png" href="assets/images/favicon-id.png">
 
-    <title>Portfolio</title>
+    <title>I. Davirro | Portfolio</title>
 </head>
 <body>
     <div class="container-fluid">
@@ -36,11 +37,12 @@
         </nav>
         </header>
 
+        <main>
         <section id="inicio">
             <div class="row hero-contenido">
                 <div class="col hero-texto">
                     <h1 class="fuente_Urbane pequeño">Hola, mi nombre es Ian y soy</h1>
-                    <h1 class="fuente_inter">estudiante en programación</h1>
+                    <h2 class="fuente_inter">estudiante en programación</h2>
 
                     <p class="fuente_Urbane">Desde sitios web hasta proyectos personales,<br>convierto ideas en páginas modernas, funcionales y atractivas.</p>
 
@@ -120,15 +122,15 @@
                     <h2 class="fuente_manrope">IAN DAVIRRO</h2>
                     <p class="text-center">Desarrollo proyectos y exploro nuevas tecnologías mientras sigo aprendiendo en el proceso.</p>
                     <div class="redes">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="https://instagram.com/trinirojic" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:idavirro@alumno.huergo.edu.ar"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/idavirro" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                     <a href="#" class="btn-azul">Conectemos</a>
                 </div>
                 <div class="col-7 d-flex flex-column align-items-end gap-3 achicado">
                     <div class="descripcion contenedor">
-                        <h1 class="fuente_manrope">Hola! Soy Ian Davirro,</h1>
+                        <h2 class="fuente_manrope">Hola! Soy Ian Davirro,</h2>
                         <p class="fuente_Urbane">
                             Estudiante de programación y desarrollador en proceso.
                             Me gusta crear cosas que no solo funcionen bien, sino que también se vean bien.
@@ -139,16 +141,16 @@
                         </p>
                     </div>
                     <div class="stacktech contenedor">
-                        <h1 class="fuente_manrope">Mis habilidades:</h1>
+                        <h2 class="fuente_manrope">Mis habilidades:</h2>
                         <div class="habilidades">
                             <div class="habilidad" data-nombre="HTML5"><i class="fab fa-html5"></i></div>
                             <div class="habilidad" data-nombre="Java"><i class="fab fa-java"></i></div>
                             <div class="habilidad" data-nombre="Python"><i class="fab fa-python"></i></div>
-                            <div class="habilidad" data-nombre="Desarrollo web"><i class="fas fa-code"></i></div>
+                            <div class="habilidad habilidad-lua" data-nombre="Lua"><img src="assets/images/lua-blanco.png" alt="Lua"></div>
                         </div>
                     </div>
                     <div id="trayectoria" class="trayectoria contenedor">
-                        <h1 class="fuente_manrope">Trayectoria</h1>
+                        <h2 class="fuente_manrope">Trayectoria</h2>
                         <div class="fila-trayectoria">
                             <span>Primaria</span>
                             <span>I. Zaccaria</span>
@@ -209,11 +211,12 @@
                 </details>
             </div>
         </section>
+        </main>
         
     <!-- FOOTER -->
 
         <footer id="contacto" class="site-footer">
-            <h1 class="footer-title">IAN DAVIRRO</h1>
+            <p class="footer-title">IAN DAVIRRO</p>
 
             <div class="footer-main">
                 <nav class="footer-nav" aria-label="Navegación del pie de página">
@@ -224,10 +227,10 @@
                 </nav>
 
                 <div class="footer-socials">
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://instagram.com/felitorte" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://github.com/felitorte" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:idavirro@alumno.huergo.edu.ar" aria-label="Gmail"><i class="fas fa-envelope"></i></a>
+                    <a href="#" class="red-no-disponible" data-mensaje="Discord: zernel" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                    <a href="https://instagram.com/trinirojic" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/idavirro" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                 </div>
             </div>
 
@@ -247,11 +250,15 @@
             <h2>Agendar cita</h2>
             <p>Contame sobre tu proyecto y me pondré en contacto con vos.</p>
             <form id="form-contacto">
-                <input type="text" placeholder="Tu nombre" required>
-                <input type="email" placeholder="Tu correo" required>
-                <textarea placeholder="Contame sobre tu proyecto" required></textarea>
+                <label for="nombre-contacto">Nombre</label>
+                <input id="nombre-contacto" type="text" placeholder="Tu nombre" required>
+                <label for="correo-contacto">Correo</label>
+                <input id="correo-contacto" type="email" placeholder="Tu correo" required>
+                <label for="mensaje-contacto">Mensaje</label>
+                <textarea id="mensaje-contacto" placeholder="Contame sobre tu proyecto" required></textarea>
                 <button class="btn-azul" type="submit">Enviar consulta</button>
             </form>
+            <a class="descargar-cv" href="assets/cv-ian-davirro.pdf" target="_blank">Descargar CV <i class="fas fa-download"></i></a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
@@ -273,6 +280,13 @@
             });
         });
 
+        document.querySelectorAll('.red-no-disponible').forEach(function (red) {
+            red.addEventListener('click', function (evento) {
+                evento.preventDefault();
+                alert(red.dataset.mensaje || 'Esta red no está disponible por ahora.');
+            });
+        });
+
         document.querySelectorAll('.cerrar-modal').forEach(function (boton) {
             boton.addEventListener('click', function () {
                 boton.closest('.modal').style.display = 'none';
@@ -286,7 +300,12 @@
 
         document.getElementById('form-contacto').addEventListener('submit', function (evento) {
             evento.preventDefault();
-            alert('Formulario listo. Falta agregar tu correo de destino para enviar las consultas.');
+            const nombre = document.getElementById('nombre-contacto').value;
+            const correo = document.getElementById('correo-contacto').value;
+            const mensaje = document.getElementById('mensaje-contacto').value;
+            const asunto = encodeURIComponent('Consulta desde el portfolio de ' + nombre);
+            const cuerpo = encodeURIComponent('Nombre: ' + nombre + '\nCorreo: ' + correo + '\n\nMensaje:\n' + mensaje);
+            window.location.href = 'mailto:idavirro@alumno.huergo.edu.ar?subject=' + asunto + '&body=' + cuerpo;
         });
     </script>
 </body>
