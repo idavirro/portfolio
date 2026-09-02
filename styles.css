@@ -22,6 +22,13 @@
   font-display: swap;
 }
 
+:root {
+        --color-principal: #076ff6;
+        --color-fondo: #08090d;
+        --color-texto: #dfe1e1;
+        --color-panel: rgba(8, 15, 24, 0.6);
+}
+
 .fuente_montserrat {
     font-family: 'MontserratVariable', sans-serif !important;
 }
@@ -53,8 +60,8 @@
 
 
 body {
-    background: #08090d;
-    background-image: radial-gradient(circle at 70% 40%, #076ff6, transparent 40%);
+    background: var(--color-fondo);
+    background-image: radial-gradient(circle at 70% 40%, var(--color-principal), transparent 40%);
     background-attachment: fixed;
 }
 
@@ -418,7 +425,7 @@ header nav {
 
 h1 {
     text-align: left;
-    color: #dfe1e1;
+    color: var(--color-texto);
 }
 
 h2 {
@@ -470,7 +477,7 @@ h2 {
 }
 
 .contenedor {
-    background-color: rgba(8, 15, 24, 0.6);
+    background-color: var(--color-panel);
     border: 1px solid rgba(10, 50, 96, 0.4);
     border-radius: 15px;
     padding: 24px;
