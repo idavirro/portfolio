@@ -343,7 +343,7 @@ header nav {
   border-radius: 50%;
   background-position: center;
   background-size: cover;
-  background: radial-gradient(circle at 70% 30%, #076ff6, #062f64);
+  background: radial-gradient(circle at 70% 30%, #4a9cff, #164d8d);
   overflow: hidden;
 }
 
@@ -807,6 +807,78 @@ p {
 
 .modo-claro .contenedor, .modo-claro .pregunta-faq, .modo-claro .proyecto-info, .modo-claro .proyecto-terminal {
     background-color: rgba(255, 255, 255, 0.85);
+}
+
+.modo-claro .titulo-faq span {
+    color: #1c2530;
+    border-color: rgba(50, 75, 100, 0.45);
+}
+
+.modo-claro .site-footer {
+    background-color: #dfe7ef;
+    border-top-color: rgba(50, 75, 100, 0.25);
+}
+
+.modo-claro .footer-title {
+    background: linear-gradient(#33485d, #8799aa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom-color: rgba(50, 75, 100, 0.25);
+}
+
+.modo-claro .footer-nav a, .modo-claro .footer-legal a, .modo-claro .footer-bottom {
+    color: #1c2530;
+}
+
+.modo-claro .footer-socials a {
+    color: #34495e;
+    border-color: rgba(50, 75, 100, 0.4);
+}
+
+.modo-claro .footer-bottom {
+    border-top-color: rgba(50, 75, 100, 0.18);
+}
+
+.modo-claro .modal {
+    background-color: rgba(220, 230, 240, 0.88);
+}
+
+.modo-claro .custom-navbar {
+    background-color: rgba(255, 255, 255, 0.65) !important;
+    border-color: rgba(90, 110, 130, 0.28);
+}
+
+.modo-claro .btn-tema {
+    color: #c58b00;
+    background-color: rgba(255, 245, 210, 0.8);
+    border-color: rgba(190, 145, 35, 0.45);
+}
+
+.modo-claro header nav {
+    border-color: rgba(90, 110, 130, 0.28);
+}
+
+.modo-claro .custom-navbar .navbar-brand, .modo-claro .navbar-links .nav-link {
+    color: #1c2530 !important;
+}
+
+.modo-claro .formulario-contacto {
+    background-color: #ffffff;
+    border-color: rgba(50, 75, 100, 0.3);
+}
+
+.modo-claro .formulario-contacto p {
+    color: #1c2530;
+}
+
+.modo-claro .formulario-contacto input, .modo-claro .formulario-contacto textarea {
+    color: #1c2530;
+    background-color: #eef3f7;
+    border-color: rgba(50, 75, 100, 0.3);
+}
+
+.modo-claro .cerrar-modal {
+    color: #1c2530;
 }
 
 section {
