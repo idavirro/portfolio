@@ -54,7 +54,7 @@
 
 body {
     background: #08090d;
-    background-image: radial-gradient(circle at 70% 40%, #076ff6, transparent 40%);
+    background-image: radial-gradient(circle at 70% 40%, #12365f, transparent 42%);
     background-attachment: fixed;
 }
 
@@ -74,7 +74,7 @@ header nav {
 }
 
 .custom-navbar {
-    background-color: rgba(28, 29, 33, 0.75) !important; 
+    background-color: rgba(28, 29, 33, 0.6) !important; 
     backdrop-filter: blur(12px);
     border: 1px solid rgba(47, 52, 62, 0.7);
     border-radius: 100px;
@@ -181,10 +181,128 @@ header nav {
   align-items: center;
 }
 
+.btn-tema {
+    width: 38px;
+    height: 38px;
+    margin-left: 12px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid rgba(220, 230, 240, 0.35);
+    border-radius: 50%;
+}
+
 .hero-contenido {
   width: 92%;
   margin: auto;
   align-items: center;
+}
+
+#proyectos {
+    padding-top: 35px;
+}
+
+#proyectos > p {
+    margin-bottom: 45px;
+}
+
+.proyectos-grid {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 38px;
+}
+
+.proyecto-card {
+    width: 45%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-8px);
+}
+
+.proyecto-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border: 1px solid rgba(10, 80, 150, 0.6);
+    border-radius: 15px;
+}
+
+.proyecto-terminal {
+    height: 280px;
+    padding: 30px;
+    color: #c4c9cf;
+    font-family: Consolas, monospace;
+    font-size: 15px;
+    background-color: #0b111b;
+    border: 1px solid rgba(180, 190, 200, 0.22);
+    border-radius: 15px;
+}
+
+.proyecto-terminal p {
+    margin: 0 0 14px;
+    color: #c4c9cf;
+}
+
+.proyecto-terminal p:first-child {
+    margin-bottom: 28px;
+    color: #e3e5e6;
+    font-size: 20px;
+}
+
+.proyecto-terminal.violeta {
+    color: #c4c9cf;
+    background-color: #0b111b;
+    border-color: rgba(180, 190, 200, 0.22);
+}
+
+.proyecto-terminal.violeta p {
+    color: #c4c9cf;
+}
+
+.proyecto-terminal.violeta p:first-child {
+    color: #e3e5e6;
+}
+
+.terminal-cursor {
+    margin-top: 25px !important;
+}
+
+.proyecto-info {
+    position: relative;
+    width: 92%;
+    min-height: 130px;
+    margin: -55px auto 0;
+    padding: 18px;
+    background-color: rgba(15, 20, 29, 0.94);
+    border: 1px solid rgba(180, 190, 200, 0.22);
+    border-radius: 15px;
+}
+
+.proyecto-info span {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #dfe1e1;
+    font-size: 11px;
+    border: 1px solid rgba(180, 190, 200, 0.25);
+    border-radius: 100px;
+}
+
+.proyecto-info h3 {
+    margin: 12px 0 6px;
+    color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+}
+
+.proyecto-info p {
+    margin: 0;
+    color: #c4c9cf;
+    font-size: 12px;
 }
 
 .hero-texto h1:first-child {
@@ -608,6 +726,87 @@ p {
 .footer-legal {
     display: flex;
     gap: 14px;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.88);
+}
+
+.modal-contenido {
+    width: 80%;
+    max-width: 950px;
+}
+
+.modal-contenido img, .modal-contenido .proyecto-terminal {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+.modal-contenido .proyecto-info {
+    margin: -40px auto 0;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    color: white;
+    font-size: 35px;
+    background: transparent;
+}
+
+.formulario-contacto {
+    position: relative;
+    width: 420px;
+    padding: 35px;
+    background-color: #0b111b;
+    border: 1px solid rgba(180, 190, 200, 0.25);
+    border-radius: 15px;
+}
+
+.formulario-contacto h2 {
+    text-align: left;
+}
+
+.formulario-contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.formulario-contacto input, .formulario-contacto textarea {
+    padding: 12px;
+    color: white;
+    background-color: #141b27;
+    border: 1px solid rgba(180, 190, 200, 0.25);
+    border-radius: 8px;
+}
+
+.formulario-contacto textarea {
+    height: 110px;
+}
+
+.modo-claro {
+    background-color: #e8edf2;
+    background-image: radial-gradient(circle at 70% 40%, #b9d9f5, transparent 42%);
+}
+
+.modo-claro h1, .modo-claro h2, .modo-claro h3, .modo-claro p, .modo-claro .fila-trayectoria {
+    color: #1c2530;
+}
+
+.modo-claro .contenedor, .modo-claro .pregunta-faq, .modo-claro .proyecto-info, .modo-claro .proyecto-terminal {
+    background-color: rgba(255, 255, 255, 0.85);
 }
 
 section {

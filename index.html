@@ -23,14 +23,14 @@
                     <!-- enlaces -->
                     <div class="navbar-links">
                         <a class="nav-link fuente_Urbane" href="#proyectos">PROYECTOS</a>
-                        <a class="nav-link fuente_Urbane" href="#trayectoria">TRAYECTORIA</a>
                         <a class="nav-link fuente_Urbane" href="#sobremi">SOBRE MÍ</a>
                         <a class="nav-link fuente_Urbane" href="#faqs">FAQS</a>
                     </div>
 
                     <!-- contactar -->
                     <div class="navbar-button">
-                        <a class="btn-azul-nav" href="#contacto">Agendar cita</a>
+                        <button class="btn-azul-nav abrir-contacto">Agendar cita</button>
+                        <button id="modo-tema" class="btn-tema" aria-label="Cambiar modo de color"><i class="fas fa-sun"></i></button>
                     </div>
                 </div>
         </nav>
@@ -69,7 +69,41 @@
 
         <section id="proyectos">
             <h2 class="fuente_manrope">Mis proyectos</h2>
-            <p class="fuente_Urbane text-center">Cuento con multiples proyectos realizados en la secundaria, <br> trabajados con compañeros, mejorando mi trabajo en equipo y habilidades.</p>
+            <p class="fuente_Urbane text-center">Una selección de juegos y proyectos que desarrollé mientras aprendía programación.</p>
+            <div class="proyectos-grid">
+                <div class="proyecto-card">
+                    <img src="assets/images/proyectos/slither.png" alt="Viper.io">
+                    <div class="proyecto-info">
+                        <span>Juego con Pygame</span>
+                        <h3>Viper.io</h3>
+                        <p>Una recreación de Slither.io con skins, bots, minimapa y modos de juego.</p>
+                    </div>
+                </div>
+                <div class="proyecto-card">
+                    <img src="assets/images/proyectos/squidgame.png" alt="Squid Game">
+                    <div class="proyecto-info">
+                        <span>Juego con Pygame</span>
+                        <h3>Squid Game</h3>
+                        <p>Una colección de minijuegos inspirados en El juego del calamar.</p>
+                    </div>
+                </div>
+                <div class="proyecto-card">
+                    <img src="assets/images/proyectos/pokejuegotp.png" alt="Pokémon Huergo TP">
+                    <div class="proyecto-info">
+                        <span>Python · Estructuras de datos</span>
+                        <h3>Pokémon Huergo TP</h3>
+                        <p>Juego de consola donde apliqué por primera vez stacks, queues y listas enlazadas.</p>
+                    </div>
+                </div>
+                <div class="proyecto-card">
+                    <img src="assets/images/proyectos/pokemonjuego.png" alt="Pokémon Violeta">
+                    <div class="proyecto-info">
+                        <span>Python · 3.º año</span>
+                        <h3>Pokémon Violeta</h3>
+                        <p>Juego de consola con combates y modos de juego que desarrollé durante 3.º año.</p>
+                    </div>
+                </div>
+            </div>
         </section>
         
         <section id="sobremi">
@@ -182,8 +216,7 @@
                     <a href="#inicio">Inicio</a>
                     <a href="#sobremi">Sobre mí</a>
                     <a href="#proyectos">Proyectos</a>
-                    <a href="#trayectoria">Trayectoria</a>
-                    <a href="#contacto">Contacto</a>
+                    <a href="#" class="abrir-contacto">Contacto</a>
                 </nav>
 
                 <div class="footer-socials">
@@ -205,6 +238,58 @@
             </div>
         </footer>
     </div>
+    <div id="modal-proyecto" class="modal">
+        <button class="cerrar-modal">×</button>
+        <div class="modal-contenido"></div>
+    </div>
+
+    <div id="modal-contacto" class="modal">
+        <div class="formulario-contacto">
+            <button class="cerrar-modal">×</button>
+            <h2>Agendar cita</h2>
+            <p>Contame sobre tu proyecto y me pondré en contacto con vos.</p>
+            <form id="form-contacto">
+                <input type="text" placeholder="Tu nombre" required>
+                <input type="email" placeholder="Tu correo" required>
+                <textarea placeholder="Contame sobre tu proyecto" required></textarea>
+                <button class="btn-azul" type="submit">Enviar consulta</button>
+            </form>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        const modalProyecto = document.getElementById('modal-proyecto');
+        const modalContacto = document.getElementById('modal-contacto');
+
+        document.querySelectorAll('.proyecto-card').forEach(function (proyecto) {
+            proyecto.addEventListener('click', function () {
+                modalProyecto.querySelector('.modal-contenido').innerHTML = proyecto.innerHTML;
+                modalProyecto.style.display = 'flex';
+            });
+        });
+
+        document.querySelectorAll('.abrir-contacto').forEach(function (boton) {
+            boton.addEventListener('click', function (evento) {
+                evento.preventDefault();
+                modalContacto.style.display = 'flex';
+            });
+        });
+
+        document.querySelectorAll('.cerrar-modal').forEach(function (boton) {
+            boton.addEventListener('click', function () {
+                boton.closest('.modal').style.display = 'none';
+            });
+        });
+
+        document.getElementById('modo-tema').addEventListener('click', function () {
+            document.body.classList.toggle('modo-claro');
+            this.innerHTML = document.body.classList.contains('modo-claro') ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        });
+
+        document.getElementById('form-contacto').addEventListener('submit', function (evento) {
+            evento.preventDefault();
+            alert('Formulario listo. Falta agregar tu correo de destino para enviar las consultas.');
+        });
+    </script>
 </body>
 </html>
