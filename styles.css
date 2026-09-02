@@ -111,12 +111,12 @@ header nav {
     flex-wrap: nowrap;
 }
 
-.custom-navbar > .container_fluid {
+.custom-navbar > .container-fluid {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .custom-navbar .navbar-brand {
