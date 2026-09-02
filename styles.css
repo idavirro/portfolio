@@ -58,6 +58,13 @@ body {
     background-attachment: fixed;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 20px 0 !important;
+}
+
 header nav {
     border-radius: 32px;
     width: 80%;
@@ -387,6 +394,12 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+    list-style: none;
+}
+
+.titulo-faq::-webkit-details-marker {
+    display: none;
 }
 
 .titulo-faq h3 {
@@ -404,6 +417,18 @@ p {
     text-align: center;
     border: 1px solid rgba(10, 80, 150, 0.7);
     border-radius: 50%;
+}
+
+.cerrar {
+    display: none;
+}
+
+.pregunta-faq[open] .abrir {
+    display: none;
+}
+
+.pregunta-faq[open] .cerrar {
+    display: block;
 }
 
 .pregunta-faq p {
@@ -490,6 +515,7 @@ p {
 
 section {
     min-height: 100vh;
+    scroll-margin-top: 100px;
 }
 
 button {
